@@ -1,8 +1,8 @@
-# AddinX.Ribbon
+# ExcelDna.FluentRibbon
+    from AddinX.Ribbon,Visit our online documentation at http://addinx.github.io
 
-Fluent ribbon builder for Excel add-in (using Excel-DNA)
+Support fluent Ribbon Xml generate and callback function.
 
-Visit our online documentation at http://addinx.github.io
 
 ## Retrieve the Nuget packages
 
@@ -10,8 +10,7 @@ Run the following command to install the fluent ribbon for Excel-DNA. It will al
 You will need to get **NetOffice** as we are using it instead of **Office.Interop.Excel** to manipulate the Excel application.
 
 ```
-PM> Install-Package AddinX.Ribbon.ExcelDna
-PM> Install-Package NetOffice.Excel -Version 1.7.3
+PM> Install-Package ExcelDna.FluentRibbon
 ```
 
 ## The AddInContext class
@@ -170,34 +169,32 @@ To do so we will replace the code above *.Items()* by the below.
 
 ## The callback events
 
-After adding the elements that will be part of the ribbon, it is necessary to define the events commands for those elements. In other terms, define how those elements will behave. The most common events are **Enable** and **Visible**, those events can be defined for nearly any elements part of a ribbon.
+????Fluent ???? Callback ??,???? ??? Command ??
 
-* **Enable** is called to define if the control should be enabled or not.
-* **Visible** is called to define what condition need to be meet to display a control or group of controls. 
-
-Another important one is **Action** which is used to define the action that will be done when a control is clicked or selected.The elements are reference using them identifier defined during the creation of the ribbon.
-
-The code that will be used to define those events is the following:
-
-```
-    protected override void CreateRibbonCommand(IRibbonCommands cmds)
-    {
-        // Reporting Group
-        cmds.AddButtonCommand(PortfolioPerformanceBtn)
-            .IsEnabled(() => AddinContext.ExcelApp.Worksheets.Count() > 2)
-            .Action(() => MessageBox.Show("Performance button clicked"));
-
-        cmds.AddButtonCommand(PortfolioContributorBtn)
-            .Action(() => MessageBox.Show("To enable the Performance button you need to have 3 sheets."));
-
-        cmds.AddButtonCommand(PortfolioAllocationBtn)
-            .Action(() => MessageBox.Show("Add one more sheet"));
-
-        cmds.AddBoxCommand(ReportingBox)
-            .IsVisible(() => AddinContext.ExcelApp.Worksheets.Count() > 1);
-    }
+Fluent ??
+```C#
+   builder.CustomUi.Ribbon.Tabs(
+                c => c.AddTab("test")
+                    .Groups(g1 => g1.AddGroup("group")
+                    .Items(g => g.AddButton("b")
+                                 .Callback(cb => cb.OnAction(() =>Console.WriteLine("Test Button"))
+                                 .GetEnabled(() => true).GetLabel(()=>"Button Callback")
+                                 )
+                            )
+                    ));
 ```
 
-* When clicking on the button *Allocation* a message box will be display stating "Add one more sheet".
-* Adding one more sheet will trigger the visibility condition for the box containing the two small buttons. The buttons will be visible if there is more than one sheet in the workbook.
-* To enable the button *Performance*, it is necessary to add an extra sheet as the condition to enable that button is to have more than two sheets.
+```c#
+    var command = new ButtonCommand(){
+        OnAction = ()=>{
+            Console.WriteLine("Button Click")
+        }
+    };
+
+    builder.CustomUi.Ribbon.Tabs(
+                c => c.AddTab("test")
+                    .Groups(g1 => g1.AddGroup("group")
+                    .Items(g => g.AddButton("b").Callback(command)
+                    )));
+
+```

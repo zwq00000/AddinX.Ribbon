@@ -20,7 +20,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContextualTab", "src\Test\I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RibbonTests", "test\RibbonTests\RibbonTests.csproj", "{BD89029A-757C-4B5C-992F-949BA57C0740}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelDna.RibbonFluent", "src\ExcelDna.RibbonFluent\ExcelDna.RibbonFluent.csproj", "{4475793A-880A-4555-ACBA-1FDFCC44F61E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelDna.FluentRibbon", "src\ExcelDna.RibbonFluent\ExcelDna.FluentRibbon.csproj", "{4475793A-880A-4555-ACBA-1FDFCC44F61E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelDna.RibbonFluent.Tests", "test\ExcelDna.RibbonFluent.Tests\ExcelDna.RibbonFluent.Tests.csproj", "{9CF807B3-EA39-4612-934E-9DF3764A021C}"
 EndProject

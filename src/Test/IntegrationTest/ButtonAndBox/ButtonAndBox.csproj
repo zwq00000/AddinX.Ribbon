@@ -66,9 +66,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\ExcelDna.RibbonFluent\ExcelDna.RibbonFluent.csproj">
+    <ProjectReference Include="..\..\..\ExcelDna.RibbonFluent\ExcelDna.FluentRibbon.csproj">
       <Project>{4475793a-880a-4555-acba-1fdfcc44f61e}</Project>
-      <Name>ExcelDna.RibbonFluent</Name>
+      <Name>ExcelDna.FluentRibbon</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
