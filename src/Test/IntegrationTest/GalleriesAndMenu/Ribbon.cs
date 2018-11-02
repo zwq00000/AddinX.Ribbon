@@ -1,16 +1,16 @@
 using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using AddinX.Fluent;
+using AddinX.Fluent.Impl;
 using AddinX.Ribbon.Contract;
 using AddinX.Ribbon.Contract.Command;
-using AddinX.Ribbon.ExcelDna;
-using AddinX.Ribbon.Implementation;
 using AddinX.Ribbon.IntegrationTest.GalleriesAndMenu.Data;
 using AddinX.Ribbon.IntegrationTest.GalleriesAndMenu.Utils;
 
 namespace AddinX.Ribbon.IntegrationTest.GalleriesAndMenu {
     [ComVisible(true)]
-    public class Ribbon : RibbonFluent {
+    public class Ribbon : FluentRibbon {
         private const string HappyButtonId = "HappyButton1";
         private const string ShowNumberId = "ShowNumberId1";
         private const string HappyButtonId2 = "HappyButton2";

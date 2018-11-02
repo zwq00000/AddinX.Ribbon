@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/hqk5jyu3x3g8qfq9?svg=true)](https://ci.appveyor.com/project/zwq000/exceldna-fluentribbon)
+
 # ExcelDna.FluentRibbon
     from AddinX.Ribbon,Visit our online documentation at http://addinx.github.io
 

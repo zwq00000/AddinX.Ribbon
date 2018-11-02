@@ -1,15 +1,15 @@
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using AddinX.Fluent;
+using AddinX.Fluent.Impl;
 using AddinX.Ribbon.Contract;
 using AddinX.Ribbon.Contract.Command;
-using AddinX.Ribbon.ExcelDna;
-using AddinX.Ribbon.Implementation;
 using AddinX.Ribbon.IntegrationTest.ComboBoxAndDropDown.Data;
 using AddinX.Ribbon.IntegrationTest.ComboBoxAndDropDown.Utils;
 
 namespace AddinX.Ribbon.IntegrationTest.ComboBoxAndDropDown {
     [ComVisible(true)]
-    public class Ribbon : RibbonFluent {
+    public class Ribbon : FluentRibbon {
         private const string BookmarksComboId = "bookmarksCombo";
         private const string BookmarksDropDownId = "BookmarksDropDownId";
         private const string MyTabId = "MyTabId";
