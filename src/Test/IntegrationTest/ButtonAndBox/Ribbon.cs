@@ -1,14 +1,15 @@
 ﻿using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using AddinX.Fluent;
+using AddinX.Fluent.Impl;
 using AddinX.Ribbon.Contract;
 using AddinX.Ribbon.Contract.Command;
-using AddinX.Ribbon.ExcelDna;
-using AddinX.Ribbon.Implementation;
+
 
 namespace AddinX.Ribbon.IntegrationTest.ButtonAndBox {
     [ComVisible(true)]
-    public class Ribbon : RibbonFluent {
+    public class Ribbon : FluentRibbon {
         private const string DataGroupId = "DataGroupId";
         private const string PortfolioAllocationBtn = "portfolioAllocation";
         private const string PortfolioContributorBtn = "portfolioContributor";

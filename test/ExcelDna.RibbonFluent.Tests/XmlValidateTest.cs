@@ -2,7 +2,7 @@
 using System.IO;
 using System.Xml.Linq;
 using System.Xml.Schema;
-using AddinX.Ribbon.Implementation;
+using AddinX.Fluent.Impl;
 using NUnit.Framework;
 
 namespace ExcelDna.RibbonFluent.Tests {

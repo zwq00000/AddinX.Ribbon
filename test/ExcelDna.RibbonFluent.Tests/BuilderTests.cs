@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using AddinX.Fluent.Impl;
+using AddinX.Fluent.Impl.Command;
+using AddinX.Fluent.Impl.Control;
 using AddinX.Ribbon.Contract;
 using AddinX.Ribbon.Contract.Command;
 using AddinX.Ribbon.Contract.Command.Field;
 using AddinX.Ribbon.Contract.Control;
 using AddinX.Ribbon.Contract.Ribbon.Group;
-using AddinX.Ribbon.Implementation;
-using AddinX.Ribbon.Implementation.Command;
-using AddinX.Ribbon.Implementation.Control;
 using NUnit.Framework;
 
 namespace ExcelDna.RibbonFluent.Tests {

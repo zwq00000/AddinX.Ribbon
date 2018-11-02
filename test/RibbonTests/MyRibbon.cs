@@ -1,22 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Resources;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+using AddinX.Fluent;
+using AddinX.Fluent.Impl.Command;
 using AddinX.Ribbon.Contract;
 using AddinX.Ribbon.Contract.Command;
-using AddinX.Ribbon.Contract.Enums;
-using AddinX.Ribbon.ExcelDna;
-using AddinX.Ribbon.Implementation.Command;
 using RibbonTests.Properties;
 
 namespace RibbonTests
 {
     [ComVisible(true)]
-    public class MyRibbon:RibbonFluent {
+    public class MyFluentRibbon:FluentRibbon {
         private IToggleButtonCommand _startMeasureCommand = new ToggleButtonCommand();
         private IButtonCommand _setValueRangeCommand;
         private IButtonCommand _activeProdCommand;

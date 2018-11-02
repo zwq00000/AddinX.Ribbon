@@ -1,0 +1,26 @@
+version: 1.0.{build}
+pull_requests:
+  do_not_increment_build_number: true
+image: Visual Studio 2017
+configuration: Release
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+nuget:
+  disable_publish_on_pr: true
+before_build:
+- cmd: nuget restore
+build:
+  publish_core_console: true
+  parallel: true
+  verbosity: minimal
+after_test:
+- cmd: dotnet pack  src/ExcelDna.RibbonFluent -c Release
+artifacts:
+- path: '**\ExcelDna.RibbonFluent.*.nupkg'
+  name: Nuget

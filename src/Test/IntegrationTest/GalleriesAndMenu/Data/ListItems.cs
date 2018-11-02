@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
+using AddinX.Fluent.Impl.Command;
 using AddinX.Ribbon.Contract.Command;
-using AddinX.Ribbon.Implementation.Command;
 
 namespace AddinX.Ribbon.IntegrationTest.GalleriesAndMenu.Data
 {

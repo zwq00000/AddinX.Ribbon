@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Xml.Linq;
+using AddinX.Fluent.Impl;
 using AddinX.Ribbon.Contract;
 using AddinX.Ribbon.Contract.Enums;
-using AddinX.Ribbon.Implementation;
 using NUnit.Framework;
 
 namespace ExcelDna.RibbonFluent.Tests
