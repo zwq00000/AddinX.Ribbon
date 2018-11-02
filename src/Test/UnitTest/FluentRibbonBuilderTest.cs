@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Xml;
 using System.Xml.Linq;
+using AddinX.Fluent.Impl;
 using AddinX.Ribbon.Contract;
 using AddinX.Ribbon.Contract.Enums;
-using AddinX.Ribbon.Implementation;
-using AddinX.Ribbon.Implementation.Control;
 using NUnit.Framework;
 
 namespace AddinX.Ribbon.UnitTest

@@ -1,15 +1,15 @@
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using AddinX.Fluent;
+using AddinX.Fluent.Impl;
 using AddinX.Ribbon.Contract;
 using AddinX.Ribbon.Contract.Command;
-using AddinX.Ribbon.ExcelDna;
-using AddinX.Ribbon.Implementation;
 
 namespace AddinX.Ribbon.IntegrationTest.DialogBoxAndEditBox
 {
     [ComVisible(true)]
-    public class Ribbon : RibbonFluent
+    public class Ribbon : FluentRibbon
     {
         private const string HappyButtonId = "HappyButton";
         private const string BoxLauncherId = "BoxLauncher";

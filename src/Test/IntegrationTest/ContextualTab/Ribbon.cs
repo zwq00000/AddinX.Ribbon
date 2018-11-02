@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using AddinX.Fluent;
 using AddinX.Ribbon.Contract;
 using AddinX.Ribbon.Contract.Command;
 using AddinX.Ribbon.Contract.Enums;
-using AddinX.Ribbon.ExcelDna;
+using ExcelDna;
 
 namespace ContextualTab
 {
     [ComVisible(true)]
-    public class Ribbon : RibbonFluent
+    public class Ribbon : FluentRibbon
     {
         protected override void CreateFluentRibbon(IRibbonBuilder build)
         {
