@@ -15,6 +15,7 @@
     <RepositoryType>git</RepositoryType>
     <Company>Tianjin Lingya Tech CO.</Company>
     <Authors>zwq00000@gmail.com</Authors>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ExcelDna.Integration" Version="0.34.6" />
+    <PackageReference Include="ExcelDna.Integration" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
