@@ -4,11 +4,11 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{08EE4270-B5C9-4014-9A33-305545A16A4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RibbonTests", "test\RibbonTests\RibbonTests.csproj", "{BD89029A-757C-4B5C-992F-949BA57C0740}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelDna.FluentRibbon", "src\ExcelDna.RibbonFluent\ExcelDna.FluentRibbon.csproj", "{4475793A-880A-4555-ACBA-1FDFCC44F61E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelDna.RibbonFluent", "src\ExcelDna.RibbonFluent\ExcelDna.RibbonFluent.csproj", "{4475793A-880A-4555-ACBA-1FDFCC44F61E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelDna.RibbonFluent.Tests", "test\ExcelDna.RibbonFluent.Tests\ExcelDna.RibbonFluent.Tests.csproj", "{9CF807B3-EA39-4612-934E-9DF3764A021C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelDna.FluentRibbon.Example", "test\ExcelDna.FluentRibbon.Example\ExcelDna.FluentRibbon.Example.csproj", "{D2D8232E-0F01-4960-AA2F-30AA1B11C000}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,18 +20,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BD89029A-757C-4B5C-992F-949BA57C0740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD89029A-757C-4B5C-992F-949BA57C0740}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD89029A-757C-4B5C-992F-949BA57C0740}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{BD89029A-757C-4B5C-992F-949BA57C0740}.Debug|x64.Build.0 = Debug|Any CPU
-		{BD89029A-757C-4B5C-992F-949BA57C0740}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{BD89029A-757C-4B5C-992F-949BA57C0740}.Debug|x86.Build.0 = Debug|Any CPU
-		{BD89029A-757C-4B5C-992F-949BA57C0740}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD89029A-757C-4B5C-992F-949BA57C0740}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BD89029A-757C-4B5C-992F-949BA57C0740}.Release|x64.ActiveCfg = Release|Any CPU
-		{BD89029A-757C-4B5C-992F-949BA57C0740}.Release|x64.Build.0 = Release|Any CPU
-		{BD89029A-757C-4B5C-992F-949BA57C0740}.Release|x86.ActiveCfg = Release|Any CPU
-		{BD89029A-757C-4B5C-992F-949BA57C0740}.Release|x86.Build.0 = Release|Any CPU
 		{4475793A-880A-4555-ACBA-1FDFCC44F61E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4475793A-880A-4555-ACBA-1FDFCC44F61E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4475793A-880A-4555-ACBA-1FDFCC44F61E}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -56,13 +44,25 @@ Global
 		{9CF807B3-EA39-4612-934E-9DF3764A021C}.Release|x64.Build.0 = Release|Any CPU
 		{9CF807B3-EA39-4612-934E-9DF3764A021C}.Release|x86.ActiveCfg = Release|Any CPU
 		{9CF807B3-EA39-4612-934E-9DF3764A021C}.Release|x86.Build.0 = Release|Any CPU
+		{D2D8232E-0F01-4960-AA2F-30AA1B11C000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2D8232E-0F01-4960-AA2F-30AA1B11C000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2D8232E-0F01-4960-AA2F-30AA1B11C000}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D2D8232E-0F01-4960-AA2F-30AA1B11C000}.Debug|x64.Build.0 = Debug|Any CPU
+		{D2D8232E-0F01-4960-AA2F-30AA1B11C000}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D2D8232E-0F01-4960-AA2F-30AA1B11C000}.Debug|x86.Build.0 = Debug|Any CPU
+		{D2D8232E-0F01-4960-AA2F-30AA1B11C000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2D8232E-0F01-4960-AA2F-30AA1B11C000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2D8232E-0F01-4960-AA2F-30AA1B11C000}.Release|x64.ActiveCfg = Release|Any CPU
+		{D2D8232E-0F01-4960-AA2F-30AA1B11C000}.Release|x64.Build.0 = Release|Any CPU
+		{D2D8232E-0F01-4960-AA2F-30AA1B11C000}.Release|x86.ActiveCfg = Release|Any CPU
+		{D2D8232E-0F01-4960-AA2F-30AA1B11C000}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{BD89029A-757C-4B5C-992F-949BA57C0740} = {08EE4270-B5C9-4014-9A33-305545A16A4B}
 		{9CF807B3-EA39-4612-934E-9DF3764A021C} = {08EE4270-B5C9-4014-9A33-305545A16A4B}
+		{D2D8232E-0F01-4960-AA2F-30AA1B11C000} = {08EE4270-B5C9-4014-9A33-305545A16A4B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2AFC3E75-596F-4D4C-B0A5-21155B9C806C}
