@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Xml.Linq;
 using AddinX.Fluent.Impl.Command;
-using AddinX.Ribbon.Contract;
-using AddinX.Ribbon.Contract.Command;
-using AddinX.Ribbon.Contract.Control.DialogBoxLauncher;
+using ExcelDna.Fluent;
+using ExcelDna.Fluent.Command;
+using ExcelDna.Fluent.Control;
 
 namespace AddinX.Fluent.Impl.Control {
     public class DialogBoxLauncher : Control<IDialogBoxLauncher, IDialogBoxLauncherCommand>, IDialogBoxLauncher {
@@ -15,7 +15,7 @@ namespace AddinX.Fluent.Impl.Control {
             _btn.NoImage();
         }
 
-        protected internal override void SetRegister(ICallbackRigister register) {
+        protected internal override void SetRegister(ICallbackRegister register) {
             base.SetRegister(register);
             _btn.SetRegister(register);
         }

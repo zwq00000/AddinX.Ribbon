@@ -1,9 +1,8 @@
 using System;
 using System.Xml.Linq;
 using AddinX.Fluent.Impl.Control;
-using AddinX.Ribbon.Contract;
-using AddinX.Ribbon.Contract.Ribbon;
-using AddinX.Ribbon.Contract.Ribbon.Tab;
+using ExcelDna.Fluent;
+using ExcelDna.Fluent.Ribbon;
 
 namespace AddinX.Fluent.Impl.Ribbon {
     public class Ribbon : AddInElement, IRibbon {
@@ -15,7 +14,7 @@ namespace AddinX.Fluent.Impl.Ribbon {
             _startFromStrach = false;
         }
 
-        protected internal override void SetRegister(ICallbackRigister register) {
+        protected internal override void SetRegister(ICallbackRegister register) {
             base.SetRegister(register);
             _contextTabs?.SetRegister(register);
             _tabs?.SetRegister(register);

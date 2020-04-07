@@ -2,10 +2,9 @@
 using System.Xml.Linq;
 using AddinX.Fluent.Impl.Command;
 using AddinX.Fluent.Impl.Ribbon;
-using AddinX.Ribbon.Contract;
-using AddinX.Ribbon.Contract.Command;
-using AddinX.Ribbon.Contract.Control.Gallery;
-using AddinX.Ribbon.Contract.Control.Item;
+using ExcelDna.Fluent;
+using ExcelDna.Fluent.Command;
+using ExcelDna.Fluent.Control;
 
 namespace AddinX.Fluent.Impl.Control {
     public class Gallery : Control<IGallery, IGalleryCommand>, IGallery {
@@ -21,7 +20,7 @@ namespace AddinX.Fluent.Impl.Control {
             SizeString(7);
         }
 
-        protected internal override void SetRegister(ICallbackRigister register) {
+        protected internal override void SetRegister(ICallbackRegister register) {
             base.SetRegister(register);
             _data.SetRegister(register);
             _buttons.SetRegister(register);

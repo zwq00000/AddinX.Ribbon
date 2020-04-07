@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
 using AddinX.Fluent.Impl.Control;
-using AddinX.Ribbon.Contract;
-using AddinX.Ribbon.Contract.Ribbon;
-using AddinX.Ribbon.Contract.Ribbon.TabSet;
+using ExcelDna.Fluent;
+using ExcelDna.Fluent.Ribbon;
+using ExcelDna.Fluent.Ribbon;
 
 namespace AddinX.Fluent.Impl.Ribbon {
     public class ContextualTabs : AddInElement, IContextualTabs {
@@ -22,7 +22,7 @@ namespace AddinX.Fluent.Impl.Ribbon {
             return this;
         }
 
-        protected internal override void SetRegister(ICallbackRigister register) {
+        protected internal override void SetRegister(ICallbackRegister register) {
             base.SetRegister(register);
             foreach (var item in _items) {
                 item.SetRegister(register);

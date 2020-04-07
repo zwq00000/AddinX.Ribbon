@@ -2,26 +2,25 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using AddinX.Fluent.Impl;
-using AddinX.Ribbon.Contract;
-using AddinX.Ribbon.Contract.Command;
+using ExcelDna.Fluent.Command;
 using ExcelDna.Integration;
 using ExcelDna.Integration.CustomUI;
 using Image = System.Drawing.Image;
 
-namespace AddinX.Fluent {
+namespace ExcelDna.Fluent {
     [ComVisible(true)]
     public abstract partial class FluentRibbon : ExcelRibbon, IRibbonFluent {
         protected IRibbonUI Ribbon;
 
-        private ICallbackRigister _callbackRigister;
+        private ICallbackRegister _callbackRegister;
 
         protected FluentRibbon() {
-            _callbackRigister = new RibbonCommands();
+            _callbackRegister = new RibbonCommands();
         }
 
         public override void OnBeginShutdown(ref Array custom) {
             OnClosing();
-            _callbackRigister = null;
+            _callbackRegister = null;
             base.OnBeginShutdown(ref custom);
         }
 
@@ -44,7 +43,7 @@ namespace AddinX.Fluent {
             RibbonBuilder builder;
             if (ExcelDnaUtil.ExcelVersion >= 14.0) {
                 builder = new RibbonBuilder(NamespaceCustomUI2010) {
-                    CallbackRigister = _callbackRigister
+                    CallbackRegister = _callbackRegister
                 };
                 CreateFluentRibbon(builder);
             }
@@ -53,7 +52,7 @@ namespace AddinX.Fluent {
                 throw new InvalidOperationException("Not expected to provide CustomUI string for Excel version < 12.0");
             } else {
                 builder = new RibbonBuilder(NamespaceCustomUI2007) {
-                    CallbackRigister = _callbackRigister
+                    CallbackRegister = _callbackRegister
                 };
                 CreateFluentRibbon(builder);
             }
@@ -62,14 +61,14 @@ namespace AddinX.Fluent {
         }
 
         public ICommand FindCallback(string id) {
-            return _callbackRigister.Find(id);
+            return _callbackRegister.Find(id);
         }
 
         /// <summary>
         /// 创建 Ribbon Xml
         /// </summary>
-        /// <param name="build"></param>
-        protected abstract void CreateFluentRibbon(IRibbonBuilder build);
+        /// <param name="builder"></param>
+        protected abstract void CreateFluentRibbon(IRibbonBuilder builder);
 
 
         public abstract void OnClosing();

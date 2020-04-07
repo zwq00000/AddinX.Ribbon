@@ -1,23 +1,6 @@
 using AddinX.Fluent.Impl.Control;
-using AddinX.Ribbon.Contract.Control.Box;
-using AddinX.Ribbon.Contract.Control.Button;
-using AddinX.Ribbon.Contract.Control.ButtonGroup;
-using AddinX.Ribbon.Contract.Control.ButtonUnsize;
-using AddinX.Ribbon.Contract.Control.CheckBox;
-using AddinX.Ribbon.Contract.Control.ComboBox;
-using AddinX.Ribbon.Contract.Control.DialogBoxLauncher;
-using AddinX.Ribbon.Contract.Control.DropDown;
-using AddinX.Ribbon.Contract.Control.EditBox;
-using AddinX.Ribbon.Contract.Control.Gallery;
-using AddinX.Ribbon.Contract.Control.GalleryUnsize;
-using AddinX.Ribbon.Contract.Control.Label;
-using AddinX.Ribbon.Contract.Control.Menu;
-using AddinX.Ribbon.Contract.Control.MenuSeparator;
-using AddinX.Ribbon.Contract.Control.MenuUnsize;
-using AddinX.Ribbon.Contract.Control.Separator;
-using AddinX.Ribbon.Contract.Control.ToggleButton;
-using AddinX.Ribbon.Contract.Control.ToggleButtonUnsize;
-using AddinX.Ribbon.Contract.Ribbon.Group;
+using ExcelDna.Fluent.Control;
+using ExcelDna.Fluent.Ribbon;
 
 namespace AddinX.Fluent.Impl.Ribbon {
     public class Controls : AddInList<Control.Control>, IGroupControls, IGalleryControls, IMenuControls

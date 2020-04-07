@@ -1,6 +1,6 @@
 ﻿using System;
 using AddinX.Fluent.Impl.Ribbon;
-using AddinX.Ribbon.Contract.Control.MenuUnsize;
+using ExcelDna.Fluent.Control;
 
 namespace AddinX.Fluent.Impl.Control {
     public class MenuUnsize : ControlContainer<IMenuUnsize, Controls>, IMenuUnsize {

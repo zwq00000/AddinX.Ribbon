@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -56,7 +58,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,12 +79,6 @@
     <None Include="Resources\greenLighton_24.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ExcelDna.RibbonFluent\ExcelDna.FluentRibbon.csproj">
-      <Project>{4475793a-880a-4555-acba-1fdfcc44f61e}</Project>
-      <Name>ExcelDna.FluentRibbon</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\FillDown_16.png" />
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\SimpleRibbon.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\ExcelDna.RibbonFluent\ExcelDna.FluentRibbon.csproj">
+      <Project>{4475793a-880a-4555-acba-1fdfcc44f61e}</Project>
+      <Name>ExcelDna.FluentRibbon</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

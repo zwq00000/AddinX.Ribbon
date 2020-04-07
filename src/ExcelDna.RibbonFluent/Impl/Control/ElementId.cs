@@ -1,5 +1,5 @@
-using AddinX.Ribbon.Contract.Control;
-using AddinX.Ribbon.Contract.Enums;
+using ExcelDna.Fluent;
+using ExcelDna.Fluent.Control;
 
 namespace AddinX.Fluent.Impl.Control {
     public class ElementId : IElementId {

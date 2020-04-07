@@ -1,7 +1,7 @@
 ﻿using System;
 using AddinX.Fluent.Impl.Command;
-using AddinX.Ribbon.Contract.Command;
-using AddinX.Ribbon.Contract.Control.Separator;
+using ExcelDna.Fluent.Command;
+using ExcelDna.Fluent.Control;
 
 namespace AddinX.Fluent.Impl.Control {
     public class Separator : Control<ISeparator, ISeparatorCommand>, ISeparator {
