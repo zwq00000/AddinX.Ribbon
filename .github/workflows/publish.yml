@@ -22,5 +22,5 @@ jobs:
     - name: Pack
       run: dotnet pack .\src\ExcelDna.RibbonFluent\ -c Release -o ./
     - name: publish
-      run: dotnet nuget push ExcelDna.RibbonFluent.*.nupkg -s https://www.nuget.org -k ${{ secrets.nuget_apikey }} 
+      run: dotnet nuget push *.nupkg -s https://www.nuget.org -k ${{ secrets.nuget_apikey }} 
 
