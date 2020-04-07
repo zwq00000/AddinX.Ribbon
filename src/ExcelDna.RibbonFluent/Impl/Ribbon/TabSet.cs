@@ -1,11 +1,9 @@
 using System;
 using System.Xml.Linq;
 using AddinX.Fluent.Impl.Control;
-using AddinX.Ribbon.Contract;
-using AddinX.Ribbon.Contract.Control;
-using AddinX.Ribbon.Contract.Enums;
-using AddinX.Ribbon.Contract.Ribbon.Tab;
-using AddinX.Ribbon.Contract.Ribbon.TabSet;
+using ExcelDna.Fluent;
+using ExcelDna.Fluent.Control;
+using ExcelDna.Fluent.Ribbon;
 
 namespace AddinX.Fluent.Impl.Ribbon {
     public class TabSet : AddInElement, ITabSet {
@@ -17,7 +15,7 @@ namespace AddinX.Fluent.Impl.Ribbon {
             _tabs = new TabSetTabs();
         }
 
-        protected internal override void SetRegister(ICallbackRigister register) {
+        protected internal override void SetRegister(ICallbackRegister register) {
             base.SetRegister(register);
             _tabs.SetRegister(register);
         }

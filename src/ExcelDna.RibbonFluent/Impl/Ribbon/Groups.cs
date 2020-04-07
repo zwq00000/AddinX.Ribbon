@@ -1,5 +1,5 @@
 ﻿using AddinX.Fluent.Impl.Control;
-using AddinX.Ribbon.Contract.Ribbon.Group;
+using ExcelDna.Fluent.Ribbon;
 
 namespace AddinX.Fluent.Impl.Ribbon {
     public class Groups : AddInList<Group>, IGroups {

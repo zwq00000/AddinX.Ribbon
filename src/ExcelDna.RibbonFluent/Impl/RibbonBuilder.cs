@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Xml.Linq;
 using AddinX.Fluent.Impl.Control;
-using AddinX.Ribbon.Contract;
+using ExcelDna.Fluent;
 
 namespace AddinX.Fluent.Impl {
     public class RibbonBuilder : IRibbonBuilder {
@@ -16,14 +16,14 @@ namespace AddinX.Fluent.Impl {
             _ns = XNamespace.Get(customUiNamespace);
         }
 
-        public ICustomUi CustomUi { get; }
+        public ICustomUI CustomUi { get; }
 
         public string GetXmlString() {
-            if (CallbackRigister == null) {
-                CallbackRigister = new RibbonCommands();
+            if (CallbackRegister == null) {
+                CallbackRegister = new RibbonCommands();
             }
 
-            ((AddInElement) CustomUi).SetRegister(CallbackRigister);
+            ((AddInElement) CustomUi).SetRegister(CallbackRegister);
             var doc = new XDocument(new XDeclaration("1.0", "utf-8", null));
             doc.Add(((AddInElement) CustomUi).ToXml(_ns));
             return doc.ToString();
@@ -31,7 +31,7 @@ namespace AddinX.Fluent.Impl {
 
         #region Implementation of ICallbackRigister
 
-        public ICallbackRigister CallbackRigister { get; set; }
+        public ICallbackRegister CallbackRegister { get; set; }
 
         #endregion
     }

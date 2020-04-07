@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Xml.Linq;
 using AddinX.Fluent.Impl.Command;
-using AddinX.Ribbon.Contract;
-using AddinX.Ribbon.Contract.Command;
-using AddinX.Ribbon.Contract.Control;
-using AddinX.Ribbon.Contract.Enums;
+using ExcelDna.Fluent;
+using ExcelDna.Fluent.Command;
+using ExcelDna.Fluent.Control;
 
 namespace AddinX.Fluent.Impl.Control {
     public abstract class Control : AddInElement {
@@ -67,18 +66,18 @@ namespace AddinX.Fluent.Impl.Control {
 
         protected TContainer InnerItems { get; }
 
-        protected internal override void SetRegister(ICallbackRigister register) {
+        protected internal override void SetRegister(ICallbackRegister register) {
             base.SetRegister(register);
             InnerItems.SetRegister(register);
         }
 
         public TElement ItemNormalSize() {
-            base.SetAttribute(AttrNames.itemSize, ControlSize.normal);
+            base.SetAttribute(AttrNames.itemSize, ControlSize.Normal);
             return this.Interface;
         }
 
         public TElement ItemLargeSize() {
-            base.SetAttribute(AttrNames.itemSize, ControlSize.large);
+            base.SetAttribute(AttrNames.itemSize, ControlSize.Large);
             return this.Interface;
         }
 
@@ -178,14 +177,13 @@ namespace AddinX.Fluent.Impl.Control {
         }
 
         public TElement LargeSize() {
-            this.SetAttribute(AttrNames.size, ControlSize.large);
+            this.SetAttribute(AttrNames.size, nameof(ControlSize.Large).ToLower());
             //_size = ControlSize.large;
             return Interface;
         }
 
         public TElement NormalSize() {
-            this.SetAttribute(AttrNames.size, ControlSize.normal);
-            //_size = ControlSize.normal;
+            this.SetAttribute(AttrNames.size, nameof(ControlSize.Normal).ToLower());
             return Interface;
         }
 

@@ -2,10 +2,9 @@
 using System.Xml.Linq;
 using AddinX.Fluent.Impl.Command;
 using AddinX.Fluent.Impl.Ribbon;
-using AddinX.Ribbon.Contract;
-using AddinX.Ribbon.Contract.Command;
-using AddinX.Ribbon.Contract.Control.Box;
-using AddinX.Ribbon.Contract.Enums;
+using ExcelDna.Fluent;
+using ExcelDna.Fluent.Command;
+using ExcelDna.Fluent.Control;
 
 namespace AddinX.Fluent.Impl.Control {
     public class Box : Control<IBox, IBoxCommand>, IBox {
@@ -16,7 +15,7 @@ namespace AddinX.Fluent.Impl.Control {
             _items = new Controls();
         }
 
-        protected internal override void SetRegister(ICallbackRigister register) {
+        protected internal override void SetRegister(ICallbackRegister register) {
             base.SetRegister(register);
             _items?.SetRegister(register);
         }
@@ -24,12 +23,12 @@ namespace AddinX.Fluent.Impl.Control {
         protected override IBox Interface => this;
 
         public IBox HorizontalDisplay() {
-            SetAttribute(tag_boxStyle, BoxStyle.horizontal);
+            SetAttribute(tag_boxStyle, BoxStyle.Horizontal);
             return this;
         }
 
         public IBox VerticalDisplay() {
-            SetAttribute(tag_boxStyle, BoxStyle.vertical);
+            SetAttribute(tag_boxStyle, BoxStyle.Vertical);
             return this;
         }
 

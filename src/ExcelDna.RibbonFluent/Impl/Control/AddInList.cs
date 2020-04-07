@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
-using AddinX.Ribbon.Contract;
+using ExcelDna.Fluent;
 
 namespace AddinX.Fluent.Impl.Control {
     public abstract class AddInList {
@@ -11,9 +11,9 @@ namespace AddinX.Fluent.Impl.Control {
         /// <summary>
         /// callback register
         /// </summary>
-        protected ICallbackRigister Register { get; private set; }
+        protected ICallbackRegister Register { get; private set; }
 
-        protected internal virtual void SetRegister(ICallbackRigister register) {
+        protected internal virtual void SetRegister(ICallbackRegister register) {
             this.Register = register;
         }
     }
@@ -24,7 +24,7 @@ namespace AddinX.Fluent.Impl.Control {
         protected AddInList() {
         }
 
-        protected internal override void SetRegister(ICallbackRigister register) {
+        protected internal override void SetRegister(ICallbackRegister register) {
             base.SetRegister(register);
             foreach (var item in InnerList) {
                 item.SetRegister(register);

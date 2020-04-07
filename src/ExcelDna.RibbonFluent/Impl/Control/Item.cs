@@ -1,4 +1,4 @@
-﻿using AddinX.Ribbon.Contract.Control.Item;
+﻿using ExcelDna.Fluent.Control;
 
 namespace AddinX.Fluent.Impl.Control {
     public class Item : Control<IItem>, IItem {

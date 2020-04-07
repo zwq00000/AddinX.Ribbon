@@ -1,4 +1,4 @@
-﻿using AddinX.Ribbon.Contract.Command;
+﻿using ExcelDna.Fluent.Command;
 
 namespace AddinX.Fluent.Impl.Command {
     public class LabelCommand : ControlCommand<ILabelCommand>, ILabelCommand {

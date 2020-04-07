@@ -1,7 +1,6 @@
 ﻿using System;
 using AddinX.Fluent.Impl.Control;
-using AddinX.Ribbon.Contract.Ribbon.Group;
-using AddinX.Ribbon.Contract.Ribbon.Tab;
+using ExcelDna.Fluent.Ribbon;
 
 namespace AddinX.Fluent.Impl.Ribbon {
     public class Tab : ControlContainer<ITab, Groups>, ITab {

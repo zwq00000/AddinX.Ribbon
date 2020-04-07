@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Xml.Linq;
-using AddinX.Ribbon.Contract;
+using ExcelDna.Fluent;
 
 namespace AddinX.Fluent.Impl.Control {
     public abstract class AddInElement {
@@ -40,9 +40,9 @@ namespace AddinX.Fluent.Impl.Control {
         /// <summary>
         /// callback register
         /// </summary>
-        protected ICallbackRigister Register { get; private set; }
+        protected ICallbackRegister Register { get; private set; }
 
-        protected internal virtual void SetRegister(ICallbackRigister register) {
+        protected internal virtual void SetRegister(ICallbackRegister register) {
             this.Register = register;
         }
 

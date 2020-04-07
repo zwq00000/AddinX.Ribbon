@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Xml.Linq;
-using AddinX.Ribbon.Contract.Command;
-using AddinX.Ribbon.Contract.Command.Field;
-using AddinX.Ribbon.Contract.Enums;
+using ExcelDna.Fluent;
+using ExcelDna.Fluent.Command;
+using ExcelDna.Fluent.Command.Field;
 
 namespace AddinX.Fluent.Impl.Command {
     public class MenuCommand : ControlCommand<IMenuCommand>, IMenuCommand, ISizeField{

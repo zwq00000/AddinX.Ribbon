@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
-using AddinX.Fluent;
 using AddinX.Fluent.Impl.Command;
-using AddinX.Ribbon.Contract;
-using AddinX.Ribbon.Contract.Command;
+using ExcelDna.Fluent;
+using ExcelDna.Fluent.Command;
 using RibbonTests.Properties;
 
 namespace RibbonTests

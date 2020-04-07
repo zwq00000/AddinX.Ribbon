@@ -1,4 +1,4 @@
-﻿using AddinX.Ribbon.Contract.Control.ToggleButtonUnsize;
+﻿using ExcelDna.Fluent.Control;
 
 namespace AddinX.Fluent.Impl.Control {
     public class ToggleButtonUnsize : Control<IToggleButtonUnsize>, IToggleButtonUnsize {

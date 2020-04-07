@@ -2,9 +2,9 @@
 using System.Xml.Linq;
 using AddinX.Fluent.Impl.Command;
 using AddinX.Fluent.Impl.Control;
-using AddinX.Ribbon.Contract;
-using AddinX.Ribbon.Contract.Command;
-using AddinX.Ribbon.Contract.Ribbon.Group;
+using ExcelDna.Fluent;
+using ExcelDna.Fluent.Command;
+using ExcelDna.Fluent.Ribbon;
 
 namespace AddinX.Fluent.Impl.Ribbon {
     public class Group : ControlContainer<IGroup, Controls>, IGroup {
@@ -15,7 +15,7 @@ namespace AddinX.Fluent.Impl.Ribbon {
 
         #region Overrides of AddInElement
 
-        protected internal override void SetRegister(ICallbackRigister register) {
+        protected internal override void SetRegister(ICallbackRegister register) {
             base.SetRegister(register);
             _boxLauncher?.SetRegister(register);
         }

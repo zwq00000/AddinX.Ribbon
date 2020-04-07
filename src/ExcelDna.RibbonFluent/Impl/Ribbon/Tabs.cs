@@ -2,8 +2,8 @@
 using System.Linq;
 using System.Xml.Linq;
 using AddinX.Fluent.Impl.Control;
-using AddinX.Ribbon.Contract;
-using AddinX.Ribbon.Contract.Ribbon.Tab;
+using ExcelDna.Fluent;
+using ExcelDna.Fluent.Ribbon;
 
 namespace AddinX.Fluent.Impl.Ribbon {
     public class Tabs : AddInElement, ITabs {
@@ -13,7 +13,7 @@ namespace AddinX.Fluent.Impl.Ribbon {
             _items = new List<Tab>();
         }
 
-        protected internal override void SetRegister(ICallbackRigister register) {
+        protected internal override void SetRegister(ICallbackRegister register) {
             base.SetRegister(register);
             foreach (var item in _items) {
                 item.SetRegister(register);

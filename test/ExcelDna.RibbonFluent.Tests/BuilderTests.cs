@@ -4,11 +4,11 @@ using System.Diagnostics;
 using AddinX.Fluent.Impl;
 using AddinX.Fluent.Impl.Command;
 using AddinX.Fluent.Impl.Control;
-using AddinX.Ribbon.Contract;
-using AddinX.Ribbon.Contract.Command;
-using AddinX.Ribbon.Contract.Command.Field;
-using AddinX.Ribbon.Contract.Control;
-using AddinX.Ribbon.Contract.Ribbon.Group;
+using ExcelDna.Fluent;
+using ExcelDna.Fluent.Command;
+using ExcelDna.Fluent.Command.Field;
+using ExcelDna.Fluent.Control;
+using ExcelDna.Fluent.Ribbon;
 using NUnit.Framework;
 
 namespace ExcelDna.RibbonFluent.Tests {
@@ -45,7 +45,7 @@ namespace ExcelDna.RibbonFluent.Tests {
         public void TestOrderInRibbonXml() {
             var _startMeasureCommand = new ToggleButtonCommand();
             var callbacks = new CallbackRegsMock();
-            var builder = new RibbonBuilder(){CallbackRigister = callbacks};
+            var builder = new RibbonBuilder(){CallbackRegister = callbacks};
             builder.CustomUi.Ribbon.Tabs(ts => ts.AddTab("测量管理工具")
                 .Groups(g => g.AddGroup("测量管理工具")
                     .Items(items => {
@@ -167,7 +167,7 @@ namespace ExcelDna.RibbonFluent.Tests {
         }
     }
 
-    public class CallbackRegsMock : ICallbackRigister {
+    public class CallbackRegsMock : ICallbackRegister {
         private readonly IDictionary<string, ICommand> _commands = new SortedDictionary<string, ICommand>();
 
         public IEnumerable<ICommand> Commands {
