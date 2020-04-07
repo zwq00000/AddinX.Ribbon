@@ -1,7 +1,7 @@
 ﻿using System;
 using AddinX.Fluent.Impl.Command;
-using AddinX.Ribbon.Contract.Command;
-using AddinX.Ribbon.Contract.Control.EditBox;
+using ExcelDna.Fluent.Command;
+using ExcelDna.Fluent.Control;
 
 namespace AddinX.Fluent.Impl.Control {
     public class EditBox : Control<IEditBox, IEditBoxCommand>, IEditBox {

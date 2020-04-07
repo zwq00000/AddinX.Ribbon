@@ -1,8 +1,8 @@
-﻿using AddinX.Ribbon.Contract.Command.Field;
-using AddinX.Ribbon.Contract.Enums;
+﻿using ExcelDna.Fluent.Command.Field;
+using ExcelDna.Fluent;
 using ExcelDna.Integration.CustomUI;
 
-namespace AddinX.Fluent {
+namespace ExcelDna.Fluent {
     public abstract partial class FluentRibbon {
         private const string DefaultLabel = "";
 
@@ -90,7 +90,7 @@ namespace AddinX.Fluent {
         }
 
         /// <inheritdoc />
-        public string GetItemScreentip(IRibbonControl control, int index) {
+        public string GetItemScreenTip(IRibbonControl control, int index) {
             if (FindCallback(control.Id) is IDynamicItemsField field)
                 return field.getItemScreentip?.Invoke(index) ?? DefaultLabel;
 
@@ -98,7 +98,7 @@ namespace AddinX.Fluent {
         }
 
         /// <inheritdoc />
-        public string GetItemSupertip(IRibbonControl control, int index) {
+        public string GetItemSuperTip(IRibbonControl control, int index) {
             if (FindCallback(control.Id) is IDynamicItemsField field)
                 return field.getItemSupertip?.Invoke(index) ?? DefaultLabel;
 
@@ -128,7 +128,7 @@ namespace AddinX.Fluent {
         /// <param name="control"></param>
         /// <returns></returns>
         public string GetSize(IRibbonControl control) {
-            const string defaultValue = nameof(ControlSize.normal);
+            const string defaultValue = nameof(ControlSize.Normal);
             if (FindCallback(control.Id) is ISizeField field) return field.getSize?.Invoke().ToString() ?? defaultValue;
 
             return defaultValue;

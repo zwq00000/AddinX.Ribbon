@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using AddinX.Fluent.Impl.Command;
-using AddinX.Ribbon.Contract;
-using AddinX.Ribbon.Contract.Command;
-using AddinX.Ribbon.Contract.Control;
+using ExcelDna.Fluent;
+using ExcelDna.Fluent.Command;
+using ExcelDna.Fluent.Control;
 
 namespace AddinX.Fluent.Impl {
-    public class RibbonCommands : IRibbonCommands, ICallbackRigister {
+    public class RibbonCommands : IRibbonCommands, ICallbackRegister {
         private readonly IDictionary<string, ICommand> _commands = new SortedDictionary<string, ICommand>();
 
         public IToggleButtonCommand AddToggleButtonCommand(string id) {

@@ -1,4 +1,4 @@
-﻿using AddinX.Ribbon.Contract.Control.MenuSeparator;
+﻿using ExcelDna.Fluent.Control;
 
 namespace AddinX.Fluent.Impl.Control {
     public class MenuSeparator : Control<IMenuSeparator>, IMenuSeparator {

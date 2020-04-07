@@ -1,7 +1,7 @@
 ﻿using System.Xml.Linq;
 using AddinX.Fluent.Impl.Control;
-using AddinX.Ribbon.Contract;
-using AddinX.Ribbon.Contract.Command;
+using ExcelDna.Fluent;
+using ExcelDna.Fluent.Command;
 
 namespace AddinX.Fluent.Impl.Command {
     /// <summary>
@@ -118,12 +118,12 @@ namespace AddinX.Fluent.Impl.Command {
         }
         protected void AddGetItemScreentip(XElement element, object condition) {
             if (condition != null) {
-                element.AddAttribute(CallbackNames.getItemScreentip , nameof(IRibbonFluentCallback.GetItemScreentip));
+                element.AddAttribute(CallbackNames.getItemScreentip , nameof(IRibbonFluentCallback.GetItemScreenTip));
             }
         }
         protected void AddGetItemSupertip(XElement element, object condition) {
             if (condition != null) {
-                element.AddAttribute(CallbackNames.getItemSupertip , nameof(IRibbonFluentCallback.GetItemSupertip));
+                element.AddAttribute(CallbackNames.getItemSupertip , nameof(IRibbonFluentCallback.GetItemSuperTip));
             }
         }
 

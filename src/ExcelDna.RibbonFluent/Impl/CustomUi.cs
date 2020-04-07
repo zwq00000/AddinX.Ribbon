@@ -2,11 +2,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
 using AddinX.Fluent.Impl.Control;
-using AddinX.Ribbon.Contract;
-using AddinX.Ribbon.Contract.Ribbon;
+using ExcelDna.Fluent;
+using ExcelDna.Fluent.Ribbon;
 
 namespace AddinX.Fluent.Impl {
-    public class CustomUi : AddInElement, ICustomUi {
+    public class CustomUi : AddInElement, ICustomUI {
         private readonly IDictionary<string, string> _privateNamespaces;
         private readonly string _defaultNamespace;
 
@@ -18,7 +18,7 @@ namespace AddinX.Fluent.Impl {
             Ribbon = new Ribbon.Ribbon();
         }
 
-        protected internal override void SetRegister(ICallbackRigister register) {
+        protected internal override void SetRegister(ICallbackRegister register) {
             base.SetRegister(register);
             ((AddInElement) Ribbon).SetRegister(register);
         }
@@ -34,7 +34,7 @@ namespace AddinX.Fluent.Impl {
         /// Then it will be possible to use it when defining the idQ of the tab or group 
         /// <code><group idQ="x:Contoso" label="Contoso"/></code>
         /// </example>
-        public ICustomUi AddNamespace(string letter, string privateNamespace) {
+        public ICustomUI AddNamespace(string letter, string privateNamespace) {
             _privateNamespaces.Add(letter, privateNamespace);
             return this;
         }

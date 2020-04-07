@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Xml.Linq;
-using AddinX.Ribbon.Contract.Command;
-using AddinX.Ribbon.Contract.Command.Field;
+using ExcelDna.Fluent.Command;
+using ExcelDna.Fluent.Command.Field;
 
 namespace AddinX.Fluent.Impl.Command {
     public class ToggleButtonCommand : ButtonRegularCommand<IToggleButtonCommand>, IToggleButtonCommand, IActionPressedField, IPressedField{

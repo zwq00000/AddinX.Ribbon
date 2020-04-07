@@ -1,20 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net40;net45</TargetFrameworks>
-    <VersionPrefix>1.0.2</VersionPrefix>
+    <TargetFrameworks>net40</TargetFrameworks>
+    <VersionPrefix>1.1.0</VersionPrefix>
     <VersionSuffix>$(VersionSuffix)</VersionSuffix>
-    <RootNamespace>AddinX.Fluent</RootNamespace>
+    <RootNamespace>ExcelDna</RootNamespace>
     <PackageProjectUrl>https://github.com/zwq00000/AddinX.Ribbon</PackageProjectUrl>
     <Description>RibbonFluent builder for ExcelDna, extends AddInX.Ribbon project</Description>
     <PackageTags>Ribbon,ExcelDna</PackageTags>
     <PackageLicenseUrl>https://mit-license.org/</PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/zwq00000/AddinX.Ribbon.git</RepositoryUrl>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0</AssemblyVersion>
     <RepositoryType>git</RepositoryType>
     <Company>Tianjin Lingya Tech CO.</Company>
     <Authors>zwq00000@gmail.com</Authors>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,12 +23,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ExcelDna\" />
     <Folder Include="Properties\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ExcelDna.Integration" Version="0.34.6" />
+    <PackageReference Include="ExcelDna.Integration" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

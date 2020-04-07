@@ -1,7 +1,7 @@
 ﻿using System;
 using AddinX.Fluent.Impl.Command;
-using AddinX.Ribbon.Contract.Command;
-using AddinX.Ribbon.Contract.Control.ToggleButton;
+using ExcelDna.Fluent.Command;
+using ExcelDna.Fluent.Control;
 
 namespace AddinX.Fluent.Impl.Control {
     public class ToggleButton : Control<IToggleButton, IToggleButtonCommand>, IToggleButton {

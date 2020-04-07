@@ -2,8 +2,8 @@
 using System.Xml.Linq;
 using AddinX.Fluent.Impl.Command;
 using AddinX.Fluent.Impl.Ribbon;
-using AddinX.Ribbon.Contract.Command;
-using AddinX.Ribbon.Contract.Control.ButtonGroup;
+using ExcelDna.Fluent.Command;
+using ExcelDna.Fluent.Control;
 
 namespace AddinX.Fluent.Impl.Control {
     public class ButtonGroup : Control<IButtonGroup, IButtonGroupCommand>, IButtonGroup {

@@ -2,8 +2,7 @@
 using System.IO;
 using System.Xml.Linq;
 using AddinX.Fluent.Impl;
-using AddinX.Ribbon.Contract;
-using AddinX.Ribbon.Contract.Enums;
+using ExcelDna.Fluent;
 using NUnit.Framework;
 
 namespace ExcelDna.RibbonFluent.Tests
@@ -369,7 +368,7 @@ namespace ExcelDna.RibbonFluent.Tests
                                                     .NoImage().ShowLabel()
                                             ).Supertip("Color Picking");
                                     })
-                                    .Callback(cmds=>cmds.GetSize(()=>ControlSize.large));
+                                    .Callback(cmds=>cmds.GetSize(()=>ControlSize.Large));
                             });
                     });
             });
