@@ -1,8 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Xml.Linq;
-using AddinX.Fluent.Impl;
 using ExcelDna.Fluent;
+using ExcelDna.Fluent.Internal;
 using NUnit.Framework;
 
 namespace ExcelDna.RibbonFluent.Tests

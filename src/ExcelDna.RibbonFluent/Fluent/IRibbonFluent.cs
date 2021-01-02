@@ -3,12 +3,28 @@ using ExcelDna.Integration.CustomUI;
 
 namespace ExcelDna.Fluent {
     public interface IRibbonFluent : IRibbonFluentCallback {
+
+        /// <summary>
+        /// get Ribbon xml string
+        /// </summary>
+        /// <returns></returns>
         string GetRibbonXml();
 
+        /// <summary>
+        /// find ribbon callback command
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         ICommand FindCallback(string id);
 
+        /// <summary>
+        /// invoke on closing
+        /// </summary>
         void OnClosing();
 
+        /// <summary>
+        /// invoke on opening
+        /// </summary>
         void OnOpening();
     }
 

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
-using AddinX.Fluent.Impl.Command;
 using ExcelDna.Fluent;
 using ExcelDna.Fluent.Command;
+using ExcelDna.Fluent.Internal.Command;
 using RibbonTests.Properties;
 
 namespace RibbonTests
@@ -168,6 +168,15 @@ namespace RibbonTests
                           })
                       );
         }
+
+        /// <summary>
+        /// 用于初始化 命令
+        /// </summary>
+        /// <param name="builder"></param>
+        protected override void InitCommands(ICommandBuilder builder) {
+            throw new NotImplementedException();
+        }
+
 
         public override void OnClosing() {
             

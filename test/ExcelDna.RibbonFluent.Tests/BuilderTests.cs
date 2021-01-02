@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using AddinX.Fluent.Impl;
-using AddinX.Fluent.Impl.Command;
-using AddinX.Fluent.Impl.Control;
 using ExcelDna.Fluent;
 using ExcelDna.Fluent.Command;
 using ExcelDna.Fluent.Command.Field;
 using ExcelDna.Fluent.Control;
+using ExcelDna.Fluent.Internal;
+using ExcelDna.Fluent.Internal.Command;
+using ExcelDna.Fluent.Internal.Control;
 using ExcelDna.Fluent.Ribbon;
 using NUnit.Framework;
 
